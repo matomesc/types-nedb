@@ -1,3 +1,5 @@
+import { EventEmitter } from "events";
+
 // Type definitions for NeDB 1.8
 // Project: https://github.com/louischatriot/nedb
 // Definitions by: Stefan Steinhart <https://github.com/reppners>
@@ -7,7 +9,7 @@
 export = Nedb;
 export as namespace Nedb;
 
-declare class Nedb {
+declare class Nedb extends EventEmitter {
     constructor(pathOrOptions?: string | Nedb.DataStoreOptions);
 
     persistence: Nedb.Persistence;
